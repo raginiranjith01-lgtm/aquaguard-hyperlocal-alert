@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AquaGuard | Hyper-Local Waterlogging Alert</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            💧 AquaGuard
+        </div>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#alerts">Alerts</a>
+            <a href="#how">How It Works</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div>
+
+            <h1>
+                Hyper-Local Micro-Waterlogging
+                & Hazard Alert System
+            </h1>
+
+            <p>
+                Detect waterlogging at street level and
+                instantly alert people in the affected area.
+            </p>
+
+            <button onclick="checkRisk()">
+                Check Current Risk
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- DASHBOARD -->
+
+    <section id="dashboard" class="dashboard">
+
+        <h2>Live Risk Dashboard</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>🌧 Rainfall</h3>
+
+                <p id="rainfall">
+                    42 mm
+                </p>
+
+                <span>
+                    Current rainfall
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>💧 Water Level</h3>
+
+                <p id="waterLevel">
+                    38 cm
+                </p>
+
+                <span>
+                    Detected water depth
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>⚠ Risk Level</h3>
+
+                <p id="risk">
+                    MODERATE
+                </p>
+
+                <span>
+                    Current location risk
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📍 Location</h3>
+
+                <p id="location">
+                    Monitoring Area
+                </p>
+
+                <span>
+                    Hyper-local zone
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ALERT -->
+
+    <section id="alerts" class="alert-section">
+
+        <h2>🚨 Hazard Alert</h2>
+
+        <div id="alertBox">
+
+            <h3>⚠ Moderate Waterlogging Detected</h3>
+
+            <p>
+                Water accumulation is increasing in this
+                micro-zone. People nearby should use an
+                alternative route.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SAFE ROUTE -->
+
+    <section class="route">
+
+        <h2>🛣 Safe Route Recommendation</h2>
+
+        <div class="route-box">
+
+            <div>
+                <strong>Current Route</strong>
+
+                <p class="danger">
+                    ❌ Waterlogged
+                </p>
+            </div>
+
+
+            <div>
+                <strong>Recommended Route</strong>
+
+                <p class="safe">
+                    ✅ Alternative Road
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+
+    <section id="how" class="how">
+
+        <h2>How AquaGuard Works</h2>
+
+        <div class="flow">
+
+            <div>🌧️<br>Rain</div>
+
+            <div>↓</div>
+
+            <div>📡<br>Sensors / Camera</div>
+
+            <div>↓</div>
+
+            <div>🧠<br>AI Risk Analysis</div>
+
+            <div>↓</div>
+
+            <div>⚠️<br>Hazard Detection</div>
+
+            <div>↓</div>
+
+            <div>📱<br>User Alert</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            AquaGuard © 2026 | Smart Urban Safety System
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
