@@ -1,99 +1,68 @@
 function checkRisk() {
 
-    // Simulated sensor values
-
+    // Simulated Sensor Values
     let rainfall = Math.floor(Math.random() * 70) + 10;
-
     let waterLevel = Math.floor(Math.random() * 70) + 10;
 
+    // Display Values
+    document.getElementById("rainfall").innerText = rainfall + " mm";
+    document.getElementById("waterLevel").innerText = waterLevel + " cm";
 
-    // Display values
+    let risk = "";
 
-    document.getElementById("rainfall").innerText =
-        rainfall + " mm";
-
-    document.getElementById("waterLevel").innerText =
-        waterLevel + " cm";
-
-
-    // Risk calculation
-
-    let risk;
-
+    // Risk Calculation
     if (waterLevel >= 60 || rainfall >= 60) {
-
         risk = "HIGH";
-
     }
-
     else if (waterLevel >= 35 || rainfall >= 35) {
-
         risk = "MODERATE";
-
     }
-
     else {
-
         risk = "LOW";
-
     }
 
+    // Display Risk
+    document.getElementById("risk").innerText = risk;
 
-    // Display risk
-
-    document.getElementById("risk").innerText =
-        risk;
-
-
-    // Alert message
-
-    let alertBox =
-        document.getElementById("alertBox");
-
+    let alertBox = document.getElementById("alertBox");
 
     if (risk === "HIGH") {
 
         alertBox.innerHTML = `
-
+        <div class="alert high">
             <h3>🚨 HIGH HAZARD ALERT</h3>
-
             <p>
-                Severe water accumulation detected.
-                Avoid the affected road immediately.
+            Severe waterlogging detected.<br>
+            Avoid the affected road immediately.<br>
+            Emergency services have been notified.
             </p>
-
+        </div>
         `;
 
     }
-
     else if (risk === "MODERATE") {
 
         alertBox.innerHTML = `
-
+        <div class="alert moderate">
             <h3>⚠️ MODERATE WATERLOGGING</h3>
-
             <p>
-                Water level is increasing.
-                Consider using an alternative route.
+            Water level is increasing.<br>
+            Consider using an alternative route.
             </p>
-
+        </div>
         `;
 
     }
-
     else {
 
         alertBox.innerHTML = `
-
+        <div class="alert low">
             <h3>✅ LOW RISK</h3>
-
             <p>
-                Current water level is within
-                the safe range.
+            Current water level is within the safe range.
             </p>
-
+        </div>
         `;
 
     }
-
 }
